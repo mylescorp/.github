@@ -1,0 +1,48 @@
+name: Mark Stale Issues and PRs
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # Every Monday at 8AM UTC (11AM EAT)
+  workflow_dispatch:
+
+jobs:
+  stale:
+    name: Mark Stale
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Issues
+          stale-issue-message: >
+            This issue has been automatically marked as stale because it has not had
+            any activity in the last 30 days. It will be closed in 7 days if no further
+            activity occurs. If this issue is still relevant, please leave a comment or
+            remove the stale label. Thank you for contributing to Mylesoft Technologies!
+          close-issue-message: >
+            This issue has been closed due to inactivity. If you believe this is still
+            relevant, please open a new issue with updated context.
+          stale-issue-label: 'stale'
+          days-before-issue-stale: 30
+          days-before-issue-close: 7
+
+          # PRs
+          stale-pr-message: >
+            This pull request has been automatically marked as stale because it has not
+            had any activity in the last 14 days. It will be closed in 7 days if no
+            further activity occurs. Please update or rebase your PR to keep it active.
+          close-pr-message: >
+            This pull request has been closed due to inactivity. Feel free to reopen
+            or create a new PR if you'd like to continue.
+          stale-pr-label: 'stale'
+          days-before-pr-stale: 14
+          days-before-pr-close: 7
+
+          # Exempt labels
+          exempt-issue-labels: 'pinned,security,priority: critical,in-progress'
+          exempt-pr-labels: 'pinned,security,priority: critical,in-progress'
