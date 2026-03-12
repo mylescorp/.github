@@ -162,7 +162,7 @@ Security       →  End-to-end encryption · GDPR compliant · 2FA · SSO · Bio
 
 <div align="center">
 
-*© 2025 Mylesoft Technologies Limited. All Rights Reserved.*
+*© 2026 Mylesoft Technologies Limited. All Rights Reserved.*
 
 **Transforming Industries, Empowering Generations.**
 
