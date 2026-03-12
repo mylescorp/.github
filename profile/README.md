@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://www.mylesoft.com/logo.png" alt="Mylesoft Technologies" width="200"/>
+<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylesoft-logo.png" alt="Mylesoft Technologies" width="200"/>
 
 # Mylesoft Technologies Limited
 
