@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest a new feature or enhancement for a Mylesoft product
+about: Suggest a new feature or enhancement for a MylesCorp product
 title: "[FEATURE] "
 labels: enhancement, needs-review
 assignees: ''
@@ -15,7 +15,7 @@ A clear and concise description of the feature you're requesting.
 - [ ] MylesCare
 - [ ] MylesCRM
 - [ ] AgriMyles
-- [ ] Myles AI
+- [ ] MylesProp
 - [ ] Other: ___________
 
 ## 🎯 Problem This Solves
