@@ -24,7 +24,7 @@ Closes #<!-- issue number -->
 - [ ] MylesCare
 - [ ] MylesCRM
 - [ ] AgriMyles
-- [ ] Myles AI
+- [ ] MylesProp
 - [ ] Other: ___________
 
 ---
@@ -50,7 +50,7 @@ Add before/after screenshots for UI changes.
 ---
 
 ## ✅ Checklist
-- [ ] My code follows the Mylesoft coding standards
+- [ ] My code follows the MylesCorp coding standards
 - [ ] I have performed a self-review of my code
 - [ ] I have commented my code where necessary
 - [ ] I have updated relevant documentation
