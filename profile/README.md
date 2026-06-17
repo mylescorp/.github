@@ -32,14 +32,14 @@ Every product runs on a shared architecture: multi-tenant, mobile-first, and M-P
 <strong>Jonathan Myles</strong><br/>
 <em>Founder & CEO</em><br/><br/>
 Self-taught full-stack developer and founder. Leads product, engineering, and technical architecture across all MylesCorp products.<br/><br/>
-[![GitHub](https://img.shields.io/badge/GitHub-Mylesoft-1B3A6B?style=flat-square&logo=github&logoColor=white)](https://github.com/Mylesoft)
+<a href="https://github.com/Mylesoft"><img src="https://img.shields.io/badge/GitHub-Mylesoft-1B3A6B?style=for-the-badge&logo=github&logoColor=white"/></a>
 </td>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/pauline-moraa.jpeg" width="150" style="border-radius:50%"/><br/><br/>
 <strong>Pauline Moraa</strong><br/>
 <em>Co-Founder & COO</em><br/><br/>
 Leads sales, customer-facing execution, and day-to-day operations. The commercial engine behind MylesCorp's growth.<br/><br/>
-[![GitHub](https://img.shields.io/badge/GitHub-PollyM--tech-C4972A?style=flat-square&logo=github&logoColor=white)](https://github.com/PollyM-tech)
+<a href="https://github.com/PollyM-tech"><img src="https://img.shields.io/badge/GitHub-PollyM--tech-C4972A?style=for-the-badge&logo=github&logoColor=white"/></a>
 </td>
 </tr>
 </table>
