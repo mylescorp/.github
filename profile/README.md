@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylesoft-logo.png" alt="Mylesoft Technologies" width="200"/>
+<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylesoft-logo.png" alt="MylesCorp Technologies" width="200"/>
 
-# Mylesoft Technologies Limited
+# MylesCorp Technologies
 
-### *Transforming Industries, Empowering Generations.*
+### *Building the operating system for East African institutions.*
 
-[![Website](https://img.shields.io/badge/Website-mylesoft.com-1B3A6B?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.mylesoft.com)
-[![Email](https://img.shields.io/badge/Email-info@mylesoft.com-C4972A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@mylesoft.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mylesoft-1B3A6B?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/company/mylesoft-technologies)
-[![Twitter](https://img.shields.io/badge/Twitter-@Mylesoft-1B3A6B?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/mylesoft)
+[![Website](https://img.shields.io/badge/Website-mylescorptech.com-1B3A6B?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.mylescorptech.com)
+[![Email](https://img.shields.io/badge/Email-info@mylescorptech.com-C4972A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@mylescorptech.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-MylesCorp-1B3A6B?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/company/mylescorptech)
+[![Twitter](https://img.shields.io/badge/Twitter-@mylescorptech-1B3A6B?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/mylescorptech)
 
 </div>
 
@@ -17,41 +17,27 @@
 
 ## 🌍 About Us
 
-**Mylesoft Technologies Limited** is East Africa's leading AI-powered software technology company, headquartered in Westlands, Nairobi, Kenya. Founded in 2020 by **Jonathan Myles**, we build enterprise-grade SaaS solutions that address the unique challenges of 18 critical sectors across East Africa — from education and healthcare to agriculture, logistics, and government.
+**MylesCorp Technologies** is a Nairobi-based SaaS company building industry-specific software for East African businesses and institutions. We focus on sectors where generic software fails — schools, clinics, farms, rental properties, and growing businesses — and build products that fit how they actually operate.
 
-Our mission is simple: **to create affordable, locally-relevant, world-class AI-powered software that transforms industries and empowers generations.**
-
-At the core of every Mylesoft product is **Myles AI** — our proprietary intelligence engine trained on African data, supporting 20+ African languages, and built to thrive in East Africa's unique infrastructure and connectivity landscape.
+Every product runs on a shared architecture: multi-tenant, mobile-first, and M-Pesa native.
 
 ---
 
-## 📊 By the Numbers
-
-<div align="center">
-
-| 📅 Founded | 📦 Products | 👥 Professionals | 🗺️ Counties Covered | 🏭 Industries | 💼 Model |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **2020** | **20+** | **150+** | **47+** | **18** | **SaaS** |
-
-</div>
-
----
-
-## 👥 The Team Behind Mylesoft
+## 👥 The Team
 
 <table>
 <tr>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/jonathan-myles.jpeg" width="150" style="border-radius:50%"/><br/><br/>
 <strong>Jonathan Myles</strong><br/>
-<em>Founder & Chief Executive Officer</em><br/><br/>
-A visionary software engineer and entrepreneur, Jonathan founded Mylesoft Technologies in 2020 with a mission to build AI-powered solutions addressing East Africa's most critical challenges. He leads the company's overall strategy, product development, and technology architecture across all 20+ Mylesoft products.
+<em>Founder & CEO</em><br/><br/>
+Self-taught full-stack developer and founder. Leads product, engineering, and technical architecture across all MylesCorp products.
 </td>
 <td align="center" width="50%">
 <img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/pauline-moraa.jpeg" width="150" style="border-radius:50%"/><br/><br/>
 <strong>Pauline Moraa</strong><br/>
-<em>Co-Founder & Chief Operating Officer</em><br/><br/>
-Pauline brings operational excellence and business development expertise to Mylesoft. As COO, she drives the company's day-to-day operations, sales, marketing, and customer partnerships — ensuring every Mylesoft product delivers measurable impact across East Africa.
+<em>Co-Founder & COO</em><br/><br/>
+Leads sales, customer-facing execution, and day-to-day operations. The commercial engine behind MylesCorp's growth.
 </td>
 </tr>
 </table>
@@ -60,110 +46,66 @@ Pauline brings operational excellence and business development expertise to Myle
 
 ## 🚀 Our Products
 
-### ✅ Operational — Live Across East Africa
-
-| Repo | Product | Description | Sector |
-|------|---------|-------------|--------|
-| [`edumyles`](https://github.com/Mylesoft-Technologies/edumyles) | **EduMyles** | AI-powered school management system — 500+ schools, 250,000+ students | Education |
-| [`eduryde`](https://github.com/Mylesoft-Technologies/eduryde) | **EduRyde** | Real-time GPS school transport safety and route optimisation | Transportation |
-| [`mylescare`](https://github.com/Mylesoft-Technologies/mylescare) | **MylesCare** | Healthcare management — 100+ facilities, 500,000+ patient records | Healthcare |
-| [`mylescrm`](https://github.com/Mylesoft-Technologies/mylescrm) | **MylesCRM** | AI CRM for East African businesses — 300+ businesses, 1M+ records | Business |
-| [`agrimyles`](https://github.com/Mylesoft-Technologies/agrimyles) | **AgriMyles** | Farm management platform — 1,000+ farmers, 50,000+ hectares | Agriculture |
-
----
-
-### 🔨 In Active Development — Launching 2025–2026
-
-| Repo | Product | Description | Sector |
-|------|---------|-------------|--------|
-| [`mylesrealtors`](https://github.com/Mylesoft-Technologies/mylesrealtors) | **MylesRealtors** | AI real estate and property management platform | Real Estate |
-| [`mylesride`](https://github.com/Mylesoft-Technologies/mylesride) | **MylesRide** | East African ride-hailing with AI optimisation and M-Pesa integration | Transport |
-| [`myleslogistics`](https://github.com/Mylesoft-Technologies/myleslogistics) | **MylesLogistics** | Supply chain, warehouse, and last-mile delivery management | Logistics |
-| [`mylesfinance`](https://github.com/Mylesoft-Technologies/mylesfinance) | **MylesFinance** | Financial services platform for SACCOs, chamas, and microfinance | Finance |
-| [`myleslearn`](https://github.com/Mylesoft-Technologies/myleslearn) | **MylesLearn** | AI-powered LMS and e-learning for schools, universities, and corporates | Education |
-| [`mylespedia`](https://github.com/Mylesoft-Technologies/mylespedia) | **MylesPedia** | AI knowledge platform supporting 20+ African languages | Knowledge |
-| [`myleshospitality`](https://github.com/Mylesoft-Technologies/myleshospitality) | **MylesHospitality** | Hospitality management for hotels, resorts, and tourism operators | Hospitality |
-
----
-
-### 🗺️ Product Roadmap — 2026–2028
+### 🔨 Active Builds
 
 | Repo | Product | Sector |
 |------|---------|--------|
-| [`mylesretail`](https://github.com/Mylesoft-Technologies/mylesretail) | **MylesRetail** | Retail & E-commerce |
-| [`mylesbuild`](https://github.com/Mylesoft-Technologies/mylesbuild) | **MylesBuild** | Construction |
-| [`mylesenergy`](https://github.com/Mylesoft-Technologies/mylesenergy) | **MylesEnergy** | Energy & Utilities |
-| [`mylesmedia`](https://github.com/Mylesoft-Technologies/mylesmedia) | **MylesMedia** | Media & Entertainment |
-| [`mylesgov`](https://github.com/Mylesoft-Technologies/mylesgov) | **MylesGov** | Government & Public Sector |
-| [`myleslegal`](https://github.com/Mylesoft-Technologies/myleslegal) | **MylesLegal** | Legal Services |
-| [`myleshr`](https://github.com/Mylesoft-Technologies/myleshr) | **MylesHR** | Human Resources |
-| [`mylesmanufacture`](https://github.com/Mylesoft-Technologies/mylesmanufacture) | **MylesManufacture** | Manufacturing |
+| [`edumyles`](https://github.com/Mylesoft-Technologies/edumyles) | **EduMyles** | School management |
+| [`eduryde`](https://github.com/Mylesoft-Technologies/eduryde) | **EduRyde** | School transport |
+| [`mylescrm`](https://github.com/Mylesoft-Technologies/mylescrm) | **MylesCRM** | CRM |
+| [`mylescare`](https://github.com/Mylesoft-Technologies/mylescare) | **MylesCare** | Healthcare |
+| [`mylesprop`](https://github.com/Mylesoft-Technologies/mylesprop) | **MylesProp** | Property & rentals |
+| [`agrimyles`](https://github.com/Mylesoft-Technologies/agrimyles) | **AgriMyles** | Agriculture |
 
----
+### 🗺️ Roadmap
 
-### 🧠 Myles AI — The Intelligence Engine
-
-| Repo | Description |
-|------|-------------|
-| [`myles-ai`](https://github.com/Mylesoft-Technologies/myles-ai) | The proprietary AI platform powering every Mylesoft product — analytics, NLP, computer vision, predictive modelling, and custom AI models trained on African data |
+| Product | Sector |
+|---------|--------|
+| **MylesNet** | WiFi hotspot management |
+| **LegalMyles** | Legal services |
+| **FinMyles** | Financial services |
 
 ---
 
 ## 🏗️ Our Technology Stack
+
 ```
-Frontend       →  React.js · React Native · Tailwind CSS · PWA
-Backend        →  Node.js · Python · RESTful APIs · GraphQL · Microservices
-AI & ML        →  TensorFlow · PyTorch · Scikit-learn · African NLP · Computer Vision
-Database       →  PostgreSQL · MongoDB · Redis · Vector Databases
-Infrastructure →  AWS · Google Cloud · Kubernetes · Multi-region · Edge Computing
-Payments       →  M-Pesa Daraja · Airtel Money · Stripe
-Security       →  End-to-end encryption · GDPR compliant · 2FA · SSO · Biometric
+Frontend       →  Next.js · React · React Native / Expo · Tailwind CSS
+Backend        →  Convex · TypeScript · Node.js
+Auth           →  WorkOS AuthKit · Multi-tenant subdomain architecture
+Payments       →  M-Pesa Daraja · Stripe · Airtel Money
+Messaging      →  Africa's Talking SMS · Resend
+Infrastructure →  Vercel · Turborepo · GitHub Actions
+Project Mgmt   →  Linear
 ```
 
 ---
 
-## 💡 Our Competitive Edge
+## 💡 Why MylesCorp
 
-- **🤖 AI-First** — Every product is natively powered by Myles AI, not bolted on
-- **🌍 East African Context** — Built by Africans, for Africans — not adapted Western software
-- **📱 Mobile-First & Offline** — Full offline functionality, SMS/USSD fallback, M-Pesa native
-- **🔗 Integrated Ecosystem** — Single sign-on and unified AI insights across all products
-- **🔒 Local Data Sovereignty** — Data centres in East Africa, data stays in Africa
-- **💰 Affordable Pricing** — Flexible SaaS subscriptions adapted to local economic contexts
-
----
-
-## 🏢 The M.Y.L.E.S. Principle
-
-| Letter | Value | Meaning |
-|--------|-------|---------|
-| **M** | Mastery | Unwavering commitment to excellence in engineering and AI |
-| **Y** | Youth Empowerment | Investing in East Africa's next generation of tech talent |
-| **L** | Leadership | Integrity, courage, and accountability in all we do |
-| **E** | Entrepreneurship | Innovation, ownership, and agile problem-solving |
-| **S** | Service | Technology in service of genuine societal impact |
+- **East African context** — built for the infrastructure, languages, and workflows that exist here
+- **M-Pesa native** — payments are a first-class citizen, not an afterthought
+- **Multi-tenant by default** — every product supports multiple organisations on a single deployment
+- **Mobile-first** — Expo mobile app ships alongside every web product
+- **Shared architecture** — one monorepo pattern, one auth system, one payment rail across all products
 
 ---
 
 ## 📬 Get in Touch
 
-| Department | Contact |
-|------------|---------|
-| 🌐 Website | [www.mylesoft.com](https://www.mylesoft.com) |
-| 📧 General | [info@mylesoft.com](mailto:info@mylesoft.com) |
-| 🤖 AI & Data Science | [ai@mylesoft.com](mailto:ai@mylesoft.com) |
-| 🤝 Partnerships | [partnerships@mylesoft.com](mailto:partnerships@mylesoft.com) |
-| ☁️ Cloud & Infrastructure | [cloud@mylesoft.com](mailto:cloud@mylesoft.com) |
-| 📚 Training | [training@mylesoft.com](mailto:training@mylesoft.com) |
-| 📍 Location | Wester Heights, Westlands, Nairobi, Kenya |
-| 📞 Phone | +254 743 993 715 |
+| | |
+|--|--|
+| 🌐 Website | [www.mylescorptech.com](https://www.mylescorptech.com) |
+| 📧 General | [info@mylescorptech.com](mailto:info@mylescorptech.com) |
+| 📞 Phone | +254 743 993 715 / +254 751 812 884 |
+| 📍 Location | Nairobi, Kenya |
 
 ---
 
 <div align="center">
 
-*© 2026 Mylesoft Technologies Limited. All Rights Reserved.*
+*© 2026 MylesCorp Technologies. All Rights Reserved.*
 
-**Transforming Industries, Empowering Generations.**
+**Building the operating system for East African institutions.**
 
 </div>
