@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylesoft-logo.png" alt="MylesCorp Technologies" width="200"/>
+<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylescorp-logo.jpeg" alt="MylesCorp Technologies" width="200"/>
 
 # MylesCorp Technologies
 
