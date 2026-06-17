@@ -4,7 +4,7 @@
 
 # MylesCorp Technologies
 
-### *Building the operating system for East African institutions.*
+### *Transforming Industries, Empowering Generations.*
 
 [![Website](https://img.shields.io/badge/Website-mylescorptech.com-1B3A6B?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.mylescorptech.com)
 [![Email](https://img.shields.io/badge/Email-info@mylescorptech.com-C4972A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@mylescorptech.com)
@@ -106,6 +106,6 @@ Project Mgmt   →  Linear
 
 *© 2026 MylesCorp Technologies. All Rights Reserved.*
 
-**Building the operating system for East African institutions.**
+**Transforming Industries, Empowering Generations.**
 
 </div>
