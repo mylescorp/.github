@@ -1,6 +1,6 @@
 ---
 name: Product Feedback
-about: Share general feedback, suggestions, or ideas about a Mylesoft product
+about: Share general feedback, suggestions, or ideas about a MylesCorp product
 title: "[FEEDBACK] "
 labels: feedback
 assignees: ''
@@ -15,7 +15,7 @@ assignees: ''
 - [ ] Other: ___________
 
 ## 📦 Product
-Which Mylesoft product is this feedback about?
+Which MylesCorp product is this feedback about?
 
 ## 💬 Your Feedback
 Share your thoughts, ideas, or suggestions in detail.
