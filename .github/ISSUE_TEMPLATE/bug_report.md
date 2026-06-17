@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug or unexpected behaviour in a Mylesoft product
+about: Report a bug or unexpected behaviour in a MylesCorp product
 title: "[BUG] "
 labels: bug, needs-triage
 assignees: ''
@@ -15,7 +15,7 @@ A clear and concise description of what the bug is.
 - [ ] MylesCare
 - [ ] MylesCRM
 - [ ] AgriMyles
-- [ ] Myles AI
+- [ ] MylesProp
 - [ ] Other: ___________
 
 ## 🔁 Steps to Reproduce
