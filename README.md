@@ -1,2 +1,2 @@
 # .github
-Org-wide GitHub templates and workflows for Mylesoft Technologies
+Org-wide GitHub templates and workflows for MylesCorp Technologies
