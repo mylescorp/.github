@@ -1,6 +1,6 @@
-# Contributing to Mylesoft Technologies
+# Contributing to MylesCorp Technologies
 
-Thank you for your interest in contributing to Mylesoft Technologies! We build AI-powered software for East Africa and welcome contributions that help us fulfil our mission of **Transforming Industries, Empowering Generations.**
+Thank you for your interest in contributing to MylesCorp Technologies. We build industry-specific SaaS for East African businesses and institutions, and we welcome contributions that help us fulfil our mission of **Transforming Industries, Empowering Generations.**
 
 ---
 
@@ -95,7 +95,7 @@ type(scope): short description
 feat(auth): add WorkOS SSO integration
 fix(payments): resolve M-Pesa callback timeout
 docs(api): update authentication endpoints
-chore(deps): upgrade Next.js to v15
+chore(deps): upgrade Next.js to v16
 ```
 
 ---
@@ -113,35 +113,46 @@ chore(deps): upgrade Next.js to v15
 
 ## 💻 Coding Standards
 
-- **TypeScript** — All new code must be typed. Avoid `any`.
-- **Formatting** — We use Prettier. Run `npm run format` before committing.
-- **Linting** — We use ESLint. Run `npm run lint` and fix all warnings.
-- **Testing** — Write tests for new features. Maintain coverage above 70%.
-- **Comments** — Comment complex logic. Use JSDoc for exported functions.
-- **No console.log** — Use the project logger instead.
-- **Environment Variables** — Never hardcode secrets. Use `.env` files.
+- **TypeScript** — All new code must be typed. No `any` types, no `ts-ignore`
+- **Formatting** — We use Prettier. Run `pnpm format` before committing
+- **Linting** — We use ESLint. Run `pnpm lint` and fix all errors
+- **Testing** — Write tests for new features. Maintain coverage above 70%
+- **Comments** — Comment complex logic. Use JSDoc for exported functions
+- **No console.log** — Never leave console statements in committed code
+- **Environment Variables** — Never hardcode secrets. Use `.env.local` only
+- **No mock data** — Never commit placeholder, fake, or hardcoded data
+- **Zod validation** — All forms and Convex mutations must use Zod schemas
+
+Run these before pushing:
+
+```bash
+pnpm typecheck
+pnpm lint
+npm audit
+```
+
+All three must pass with zero errors before a PR is opened.
 
 ---
 
 ## 🐛 Reporting Bugs
 
-Use the [Bug Report template](https://github.com/Mylesoft-Technologies/.github/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) when creating an issue. Include as much detail as possible — steps to reproduce, screenshots, and environment details help us resolve issues faster.
+Use the [Bug Report template](https://github.com/mylescorp/.github/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) when creating an issue. Include steps to reproduce, screenshots, and environment details.
 
 ---
 
 ## 💡 Suggesting Features
 
-Use the [Feature Request template](https://github.com/Mylesoft-Technologies/.github/blob/main/.github/ISSUE_TEMPLATE/feature_request.md). Clearly describe the problem you're solving and how your proposed feature addresses it.
+Use the [Feature Request template](https://github.com/mylescorp/.github/blob/main/.github/ISSUE_TEMPLATE/feature_request.md). Clearly describe the problem you are solving and how your proposed feature addresses it.
 
 ---
 
 ## 📬 Contact
 
-For questions about contributing, reach out to:
-- **Email:** info@mylesoft.com
-- **Website:** [www.mylesoft.com](https://www.mylesoft.com)
-- **Location:** Westlands, Nairobi, Kenya
+- **Email:** [info@mylescorptech.com](mailto:info@mylescorptech.com)
+- **Website:** [www.mylescorptech.com](https://www.mylescorptech.com)
+- **Location:** Nairobi, Kenya
 
 ---
 
-*Building Legacies, Empowering Generations.* 🌍
+*MylesCorp Technologies — Transforming Industries, Empowering Generations.* 🌍
