@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylescorp-logo.jpeg" alt="MylesCorp Technologies" width="500"/>
+<img src="https://raw.githubusercontent.com/mylescorp/.github/main/assets/mylescorp-logo.jpeg" alt="MylesCorp Technologies" width="500"/>
 
 <br/>
 
@@ -34,14 +34,14 @@ Every product runs on a shared architecture: multi-tenant, mobile-first, and M-P
 <table>
 <tr>
 <td align="center" width="50%">
-<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/jonathan-myles.jpeg" width="150" style="border-radius:50%"/><br/><br/>
+<img src="https://raw.githubusercontent.com/mylescorp/.github/main/assets/jonathan-myles.jpeg" width="150" style="border-radius:50%"/><br/><br/>
 <strong>Jonathan Myles</strong><br/>
 <em>Founder & CEO</em><br/><br/>
 Self-taught full-stack developer and founder. Leads product, engineering, and technical architecture across all MylesCorp products.<br/><br/>
 <a href="https://github.com/Mylesoft"><img src="https://img.shields.io/badge/GitHub-Mylesoft-1B3A6B?style=for-the-badge&logo=github&logoColor=white"/></a>
 </td>
 <td align="center" width="50%">
-<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/pauline-moraa.jpeg" width="150" style="border-radius:50%"/><br/><br/>
+<img src="https://raw.githubusercontent.com/mylescorp/.github/main/assets/pauline-moraa.jpeg" width="150" style="border-radius:50%"/><br/><br/>
 <strong>Pauline Moraa</strong><br/>
 <em>Co-Founder & COO</em><br/><br/>
 Leads sales, customer-facing execution, and day-to-day operations. The commercial engine behind MylesCorp's growth.<br/><br/>
@@ -58,12 +58,12 @@ Leads sales, customer-facing execution, and day-to-day operations. The commercia
 
 | Repo | Product | Sector |
 |------|---------|--------|
-| [`edumyles`](https://github.com/Mylesoft-Technologies/edumyles) | **EduMyles** | School management |
-| [`eduryde`](https://github.com/Mylesoft-Technologies/eduryde) | **EduRyde** | School transport |
-| [`mylescrm`](https://github.com/Mylesoft-Technologies/mylescrm) | **MylesCRM** | CRM |
-| [`mylescare`](https://github.com/Mylesoft-Technologies/mylescare) | **MylesCare** | Healthcare |
-| [`mylesprop`](https://github.com/Mylesoft-Technologies/mylesprop) | **MylesProp** | Property & rentals |
-| [`agrimyles`](https://github.com/Mylesoft-Technologies/agrimyles) | **AgriMyles** | Agriculture |
+| [`edumyles`](https://github.com/mylescorp/edumyles) | **EduMyles** | School management |
+| [`eduryde`](https://github.com/mylescorp/eduryde) | **EduRyde** | School transport |
+| [`mylescrm`](https://github.com/mylescorp/mylescrm) | **MylesCRM** | CRM |
+| [`mylescare`](https://github.com/mylescorp/mylescare) | **MylesCare** | Healthcare |
+| [`mylesprop`](https://github.com/mylescorp/mylesprop) | **MylesProp** | Property & rentals |
+| [`agrimyles`](https://github.com/mylescorp/agrimyles) | **AgriMyles** | Agriculture |
 
 ### 🗺️ Roadmap
 
