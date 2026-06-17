@@ -1,10 +1,12 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylescorp-logo.jpeg" alt="MylesCorp Technologies" width="400"/>
+<img src="https://raw.githubusercontent.com/Mylesoft-Technologies/.github/main/assets/mylescorp-logo.jpeg" alt="MylesCorp Technologies" width="500"/>
 
-# MylesCorp Technologies
+<br/>
 
 ### *Transforming Industries, Empowering Generations.*
+
+<br/>
 
 [![Website](https://img.shields.io/badge/Website-mylescorptech.com-1B3A6B?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.mylescorptech.com)
 [![Email](https://img.shields.io/badge/Email-info@mylescorptech.com-C4972A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@mylescorptech.com)
@@ -71,15 +73,41 @@ Leads sales, customer-facing execution, and day-to-day operations. The commercia
 
 ## 🏗️ Our Technology Stack
 
-```
-Frontend       →  Next.js · React · React Native / Expo · Tailwind CSS
-Backend        →  Convex · TypeScript · Node.js
-Auth           →  WorkOS AuthKit · Multi-tenant subdomain architecture
-Payments       →  M-Pesa Daraja · Stripe · Airtel Money
-Messaging      →  Africa's Talking SMS · Resend
-Infrastructure →  Vercel · Turborepo · GitHub Actions
-Project Mgmt   →  Linear
-```
+<div align="center">
+
+**Frontend**
+
+<a href="#"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/React-1B3A6B?style=for-the-badge&logo=react&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/React%20Native-1B3A6B?style=for-the-badge&logo=react&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/TypeScript-1B3A6B?style=for-the-badge&logo=typescript&logoColor=white"/></a>
+
+**Backend & Database**
+
+<a href="#"><img src="https://img.shields.io/badge/Convex-1B3A6B?style=for-the-badge&logo=convex&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Node.js-2EA44F?style=for-the-badge&logo=node.js&logoColor=white"/></a>
+
+**Auth & Payments**
+
+<a href="#"><img src="https://img.shields.io/badge/WorkOS-000000?style=for-the-badge&logo=workos&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/M--Pesa%20Daraja-2EA44F?style=for-the-badge&logo=safaricom&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Airtel%20Money-C4972A?style=for-the-badge&logo=airtel&logoColor=white"/></a>
+
+**Messaging**
+
+<a href="#"><img src="https://img.shields.io/badge/Africa's%20Talking-C4972A?style=for-the-badge&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Resend-000000?style=for-the-badge&logo=resend&logoColor=white"/></a>
+
+**Infrastructure**
+
+<a href="#"><img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Turborepo-EF4444?style=for-the-badge&logo=turborepo&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Linear-5E6AD2?style=for-the-badge&logo=linear&logoColor=white"/></a>
+
+</div>
 
 ---
 
@@ -90,6 +118,14 @@ Project Mgmt   →  Linear
 - **Multi-tenant by default** — every product supports multiple organisations on a single deployment
 - **Mobile-first** — Expo mobile app ships alongside every web product
 - **Shared architecture** — one monorepo pattern, one auth system, one payment rail across all products
+
+---
+
+## 💼 Work With Us
+
+We are always looking for talented engineers, designers, and operators who are passionate about building for East Africa.
+
+📧 [info@mylescorptech.com](mailto:info@mylescorptech.com)
 
 ---
 
