@@ -1,0 +1,8 @@
+{
+  "name": "Greptile 5/5 Auto Merge",
+  "description": "Queues eligible pull requests for GitHub auto-merge after a successful Greptile Apps check. Requires Greptile 5/5 status configuration and branch protection.",
+  "iconName": "octicon-git-pull-request",
+  "categories": [
+    "Continuous integration"
+  ]
+}
