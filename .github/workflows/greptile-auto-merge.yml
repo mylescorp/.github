@@ -47,7 +47,7 @@ jobs:
 
             check_runs=$(gh api --paginate "repos/$GITHUB_REPOSITORY/commits/$head_sha/check-runs?per_page=100" | jq -s '[.[].check_runs[]]')
             if ! jq -e --arg sha "$head_sha" \
-              'any(.[]; .name == "Greptile Apps" and .app.slug == "greptile-apps" and .status == "completed" and .conclusion == "success" and .head_sha == $sha)' \
+              '[.[] | select(.name == "Greptile Apps" and .app.slug == "greptile-apps")] | max_by(.id) | .status == "completed" and .conclusion == "success" and .head_sha == $sha' \
               <<<"$check_runs" >/dev/null; then
               continue
             fi
@@ -60,7 +60,11 @@ jobs:
               continue
             fi
 
-            gh pr merge "$number" --repo "$GITHUB_REPOSITORY" --match-head-commit "$head_sha" --auto --squash
+            if gh pr merge "$number" --repo "$GITHUB_REPOSITORY" --match-head-commit "$head_sha" --auto --squash; then
+              echo "Queued auto-merge for PR #$number at $head_sha."
+            else
+              echo "Could not queue auto-merge for PR #$number at $head_sha; continuing with remaining PRs." >&2
+            fi
           done < <(jq -r --arg base "$default_branch" \
             '.[] | select(.state == "open" and .draft == false and .base.ref == $base) | [.number, .head.sha] | @tsv' \
             <<<"$pull_requests")
