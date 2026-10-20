@@ -4,9 +4,9 @@ Organization-wide GitHub templates, shared workflows, and repository policy for 
 
 ## Pull request gate
 
-The reusable minimum secret scan lives in `.github/workflows/organization-pr-gate.yml`. It checks out the caller repository history and runs a pinned Gitleaks release with read-only permissions. Product-specific lint, tests, builds, and security checks stay in their owning repositories.
+The reusable minimum secret scan lives in .github/workflows/organization-pr-gate.yml. It checks out the caller repository history and runs a pinned Gitleaks release with read-only permissions. Product-specific lint, tests, builds, and security checks stay in their owning repositories.
 
-The GitHub Actions starter template and its metadata live at the root `workflow-templates/` directory: `workflow-templates/organization-pr-gate.yml` and `workflow-templates/organization-pr-gate.properties.json`. Add this workflow to each current repository and when creating new repositories. GitHub templates do not install themselves into repositories.
+The GitHub Actions starter template and its metadata live at the root workflow-templates/ directory: workflow-templates/organization-pr-gate.yml and workflow-templates/organization-pr-gate.properties.json. Add this workflow to each current repository and when creating new repositories. GitHub templates do not install themselves into repositories.
 
 ## Greptile review requirement
 
@@ -33,3 +33,13 @@ After an approved plan upgrade, create an active organization ruleset targeting 
 7. Keep language and product checks in their owning repository. Add cross-repository checks only for a versioned shared contract.
 
 The shared secret scan does not replace code review, dependency review, product tests, deployment approvals, or incident response.
+
+## Greptile 5/5 auto-merge
+
+The reusable workflow at .github/workflows/greptile-auto-merge.yml scans open, non-draft pull requests targeting the repository default branch. A caller runs it on a five-minute schedule and supports manual workflow_dispatch. Polling avoids GitHub's suppression of check_run-triggered workflows when a commit is associated with GitHub Actions runs. It checks that the Greptile Apps check from app greptile-apps completed successfully for the PR's exact head SHA, re-reads the PR, and queues only if the head is still unchanged. The merge command also uses --match-head-commit with that SHA to close the race between verification and merge.
+
+The merge uses a short-lived GitHub App installation token rather than GITHUB_TOKEN. GitHub App-authenticated merges can trigger downstream push and pull-request workflows. For each repository that opts in, create a GitHub App with Checks: read, Contents: write, and Pull requests: write permissions, then install it on that repository. Generate the App private key and keep it outside the repository. In the repository's Settings > Secrets and variables > Actions, add GREPTILE_AUTOMERGE_APP_CLIENT_ID as a repository variable and GREPTILE_AUTOMERGE_APP_PRIVATE_KEY as a secret. The caller passes those values to the shared reusable workflow, which scopes the installation token to those three permissions.
+
+The reusable workflow validates the actual check run and does not interpret review comments. Configure Greptile so that only a 5/5 review produces a successful Greptile Apps check, and require that status check in the repository's default-branch protection. GitHub still enforces all required approvals and checks; this workflow never bypasses branch protection. Enable GitHub auto-merge in each repository's settings.
+
+The caller template and metadata are workflow-templates/greptile-auto-merge.yml and workflow-templates/greptile-auto-merge.properties.json. Add the template as .github/workflows/greptile-auto-merge.yml in each repository. A central workflow template does not install or run in other repositories by itself. This is an opt-in per-repository caller. Organization-wide installation and enforcement still need a separate rollout across current repositories, or an organization-level GitHub App integration. New repositories must add the caller template and configure the App variable and secret when they are created.
