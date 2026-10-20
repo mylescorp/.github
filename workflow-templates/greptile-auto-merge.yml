@@ -1,21 +1,23 @@
 name: Greptile 5/5 Auto Merge
 
 on:
-  check_run:
-    types: [completed]
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: greptile-auto-merge-${{ github.repository }}
+  cancel-in-progress: false
 
 permissions:
   checks: read
-  contents: write
-  pull-requests: write
+  contents: read
+  pull-requests: read
 
 jobs:
-  auto-merge-after-greptile-5-of-5:
-    if: >-
-      github.event.check_run.name == 'Greptile Apps' &&
-      github.event.check_run.app.slug == 'greptile-apps' &&
-      github.event.check_run.conclusion == 'success'
+  queue-greptile-auto-merge:
     uses: mylescorp/.github/.github/workflows/greptile-auto-merge.yml@main
     with:
-      check_run_id: ${{ github.event.check_run.id }}
-      check_head_sha: ${{ github.event.check_run.head_sha }}
+      app_client_id: ${{ vars.GREPTILE_AUTOMERGE_APP_CLIENT_ID }}
+    secrets:
+      app_private_key: ${{ secrets.GREPTILE_AUTOMERGE_APP_PRIVATE_KEY }}
