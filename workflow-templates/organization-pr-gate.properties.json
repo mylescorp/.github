@@ -1,0 +1,6 @@
+{
+  "name": "Organization PR Gate",
+  "description": "Runs the shared organization secret scan on pull requests and merge queue groups.",
+  "iconName": "shield",
+  "categories": ["Security"]
+}
