@@ -3,43 +3,64 @@ name: Greptile 5/5 Auto Merge
 on:
   workflow_call:
     inputs:
-      check_run_id:
-        description: Completed Greptile check run ID from the caller event
-        required: true
-        type: number
-      check_head_sha:
-        description: Commit SHA associated with the Greptile check run
+      app_client_id:
+        description: Client ID of the GitHub App used to queue auto-merge
         required: true
         type: string
+    secrets:
+      app_private_key:
+        description: Private key for the GitHub App used to queue auto-merge
+        required: true
 
 permissions:
   checks: read
-  contents: write
-  pull-requests: write
+  contents: read
+  pull-requests: read
 
 jobs:
   queue-auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify the successful Greptile check and queue eligible PRs
+      - name: Create narrowly scoped GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510
+        with:
+          client-id: ${{ inputs.app_client_id }}
+          private-key: ${{ secrets.app_private_key }}
+          permission-checks: read
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Find successful Greptile checks and queue matching pull requests
         env:
-          GH_TOKEN: ${{ github.token }}
-          CHECK_RUN_ID: ${{ inputs.check_run_id }}
-          CHECK_HEAD_SHA: ${{ inputs.check_head_sha }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         shell: bash
         run: |
           set -euo pipefail
-          [[ "$CHECK_RUN_ID" =~ ^[0-9]+$ ]]
-          [[ "$CHECK_HEAD_SHA" =~ ^([0-9a-f]{40}|[0-9a-f]{64})$ ]]
-          check_run=$(gh api "repos/$GITHUB_REPOSITORY/check-runs/$CHECK_RUN_ID")
-          jq -e --arg sha "$CHECK_HEAD_SHA" \
-            '.name == "Greptile Apps" and .app.slug == "greptile-apps" and .status == "completed" and .conclusion == "success" and .head_sha == $sha' \
-            <<<"$check_run" >/dev/null
+
           default_branch=$(gh api "repos/$GITHUB_REPOSITORY" --jq '.default_branch')
-          pull_requests=$(gh api "repos/$GITHUB_REPOSITORY/commits/$CHECK_HEAD_SHA/pulls?per_page=100")
-          mapfile -t eligible_prs < <(jq -r --arg base "$default_branch" --arg sha "$CHECK_HEAD_SHA" \
-            '.[] | select(.state == "open" and .draft == false and .base.ref == $base and .head.sha == $sha) | .number' \
+          pull_requests=$(gh api --paginate "repos/$GITHUB_REPOSITORY/pulls?state=open&per_page=100" | jq -s 'add')
+
+          while IFS=$'\t' read -r number head_sha; do
+            [[ -n "$number" && -n "$head_sha" ]] || continue
+            [[ "$head_sha" =~ ^([0-9a-f]{40}|[0-9a-f]{64})$ ]] || continue
+
+            check_runs=$(gh api --paginate "repos/$GITHUB_REPOSITORY/commits/$head_sha/check-runs?per_page=100" | jq -s '[.[].check_runs[]]')
+            if ! jq -e --arg sha "$head_sha" \
+              'any(.[]; .name == "Greptile Apps" and .app.slug == "greptile-apps" and .status == "completed" and .conclusion == "success" and .head_sha == $sha)' \
+              <<<"$check_runs" >/dev/null; then
+              continue
+            fi
+
+            current_pr=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$number")
+            if ! jq -e --arg base "$default_branch" --arg sha "$head_sha" \
+              '.state == "open" and .draft == false and .base.ref == $base and .head.sha == $sha' \
+              <<<"$current_pr" >/dev/null; then
+              echo "Skipping PR #$number because its state or head changed after the Greptile check."
+              continue
+            fi
+
+            gh pr merge "$number" --repo "$GITHUB_REPOSITORY" --match-head-commit "$head_sha" --auto --squash
+          done < <(jq -r --arg base "$default_branch" \
+            '.[] | select(.state == "open" and .draft == false and .base.ref == $base) | [.number, .head.sha] | @tsv' \
             <<<"$pull_requests")
-          for number in "${eligible_prs[@]}"; do
-            gh pr merge "$number" --repo "$GITHUB_REPOSITORY" --auto --squash
-          done
