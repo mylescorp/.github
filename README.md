@@ -33,3 +33,12 @@ After an approved plan upgrade, create an active organization ruleset targeting 
 7. Keep language and product checks in their owning repository. Add cross-repository checks only for a versioned shared contract.
 
 The shared secret scan does not replace code review, dependency review, product tests, deployment approvals, or incident response.
+
+
+## Greptile 5/5 auto-merge
+
+The reusable workflow at .github/workflows/greptile-auto-merge.yml queues eligible pull requests for GitHub native auto-merge only after the Greptile Apps check has completed successfully for its exact head commit. The workflow verifies the check run with the GitHub API and targets open, non-draft pull requests against the repository default branch. GitHub still enforces required approvals and status checks; the workflow never bypasses branch protection.
+
+The caller template and metadata are workflow-templates/greptile-auto-merge.yml and workflow-templates/greptile-auto-merge.properties.json. Add the template as .github/workflows/greptile-auto-merge.yml in each repository. A central workflow template does not install or run in other repositories by itself. The organization’s Greptile integration must be configured so only 5/5 reviews produce a successful Greptile Apps check, and that check should be required by each repository’s default-branch protection. Enable GitHub auto-merge in each repository’s settings.
+
+This workflow is an opt-in per-repository caller. Organization-wide installation and enforcement still need a separate rollout across existing repositories, or a GitHub App subscribed to organization-wide events. New repositories must add the caller template when created until that rollout is automated.
