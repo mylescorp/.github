@@ -1,0 +1,6 @@
+{
+  "name": "Organization PR Gate",
+  "description": "Gitleaks secret scan for pull requests",
+  "iconName": "shield",
+  "categories": ["CI"]
+}
