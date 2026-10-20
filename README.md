@@ -4,9 +4,9 @@ Organization-wide GitHub templates, shared workflows, and repository policy for 
 
 ## Pull request gate
 
-The reusable minimum secret scan lives in `.github/workflows/organization-pr-gate.yml`. It checks out the caller repository history and runs a pinned Gitleaks release with read-only permissions. Product-specific lint, tests, builds, and security checks stay in their owning repositories.
+The reusable minimum secret scan lives in .github/workflows/organization-pr-gate.yml. It checks out the caller repository history and runs a pinned Gitleaks release with read-only permissions. Product-specific lint, tests, builds, and security checks stay in their owning repositories.
 
-The GitHub Actions starter template and its metadata live at the root `workflow-templates/` directory: `workflow-templates/organization-pr-gate.yml` and `workflow-templates/organization-pr-gate.properties.json`. Add this workflow to each current repository and when creating new repositories. GitHub templates do not install themselves into repositories.
+The GitHub Actions starter template and its metadata live at the root workflow-templates/ directory: workflow-templates/organization-pr-gate.yml and workflow-templates/organization-pr-gate.properties.json. Add this workflow to each current repository and when creating new repositories. GitHub templates do not install themselves into repositories.
 
 ## Greptile review requirement
 
@@ -34,11 +34,12 @@ After an approved plan upgrade, create an active organization ruleset targeting 
 
 The shared secret scan does not replace code review, dependency review, product tests, deployment approvals, or incident response.
 
-
 ## Greptile 5/5 auto-merge
 
-The reusable workflow at .github/workflows/greptile-auto-merge.yml queues eligible pull requests for GitHub native auto-merge only after the Greptile Apps check has completed successfully for its exact head commit. The workflow verifies the check run with the GitHub API and targets open, non-draft pull requests against the repository default branch. GitHub still enforces required approvals and status checks; the workflow never bypasses branch protection.
+The reusable workflow at .github/workflows/greptile-auto-merge.yml scans open, non-draft pull requests targeting the repository default branch. A caller runs it on a five-minute schedule and supports manual workflow_dispatch. Polling avoids GitHub's suppression of check_run-triggered workflows when a commit is associated with GitHub Actions runs. It checks that the Greptile Apps check from app greptile-apps completed successfully for the PR's exact head SHA, re-reads the PR, and queues only if the head is still unchanged. The merge command also uses --match-head-commit with that SHA to close the race between verification and merge.
 
-The caller template and metadata are workflow-templates/greptile-auto-merge.yml and workflow-templates/greptile-auto-merge.properties.json. Add the template as .github/workflows/greptile-auto-merge.yml in each repository. A central workflow template does not install or run in other repositories by itself. The organization’s Greptile integration must be configured so only 5/5 reviews produce a successful Greptile Apps check, and that check should be required by each repository’s default-branch protection. Enable GitHub auto-merge in each repository’s settings.
+The merge uses a short-lived GitHub App installation token rather than GITHUB_TOKEN. GitHub App-authenticated merges can trigger downstream push and pull-request workflows. Create and install a GitHub App in each repository that opts in, granting only Checks: read, Contents: write, and Pull requests: write. In each caller repository, set the Actions variable GREPTILE_AUTOMERGE_APP_CLIENT_ID to the App client ID and the Actions secret GREPTILE_AUTOMERGE_APP_PRIVATE_KEY to its private key. Keep the private key secret. The caller passes those values to the shared reusable workflow, which scopes the installation token to those three permissions.
 
-This workflow is an opt-in per-repository caller. Organization-wide installation and enforcement still need a separate rollout across existing repositories, or a GitHub App subscribed to organization-wide events. New repositories must add the caller template when created until that rollout is automated.
+The reusable workflow validates the actual check run and does not interpret review comments. Configure Greptile so that only a 5/5 review produces a successful Greptile Apps check, and require that status check in the repository's default-branch protection. GitHub still enforces all required approvals and checks; this workflow never bypasses branch protection. Enable GitHub auto-merge in each repository's settings.
+
+The caller template and metadata are workflow-templates/greptile-auto-merge.yml and workflow-templates/greptile-auto-merge.properties.json. Add the template as .github/workflows/greptile-auto-merge.yml in each repository. A central workflow template does not install or run in other repositories by itself. This is an opt-in per-repository caller. Organization-wide installation and enforcement still need a separate rollout across current repositories, or an organization-level GitHub App integration. New repositories must add the caller template and configure the App variable and secret when they are created.
