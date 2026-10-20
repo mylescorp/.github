@@ -1,0 +1,16 @@
+name: Organization PR Gate
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  merge_group:
+
+permissions:
+  contents: read
+
+jobs:
+  organization-pr-gate:
+    name: Organization PR Gate
+    uses: mylescorp/.github/.github/workflows/organization-pr-gate.yml@main
+    permissions:
+      contents: read
